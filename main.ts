@@ -1,4 +1,4 @@
-import { Bson, MongoClient, Database, Redis, connect as redisConnect } from "./deps.ts"
+import { Bson, MongoClient, Database, Redis, redisConnect } from "./deps.ts"
 
 export type getDBProps = {
   mongoUri: string
@@ -21,16 +21,23 @@ export async function getDB({ mongoUri, mongoDb, redisUri, redisPort=6379, schem
   }, {})
 
 
+  console.log('redisUri', redisUri, 'redisPort', redisPort)
+
   const rdb:Redis = await redisConnect({
     hostname: redisUri,
     port: redisPort,
     db: 0
   })
 
+  async function close() {
+
+  }
+
   return {
     mdb,
     collections,
-    rdb
+    rdb,
+    close
   }
 
 }

@@ -8,7 +8,8 @@ export {
 } from 'https://deno.land/x/mongo@v0.31.0/mod.ts'
 
 export type { 
-  Redis 
+  Redis
 } from 'https://deno.land/x/redis/mod.ts';
 
+export { connect as redisConnect } from  'https://deno.land/x/redis/mod.ts';
 export { z } from "https://deno.land/x/zod@v3.19.1/mod.ts";
