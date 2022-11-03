@@ -37,7 +37,29 @@ export async function getDB({ mongoUri, mongoDb, redisUri, redisPort=6379, schem
     mdb,
     collections,
     rdb,
-    close
+    close,
+    getSession,
+    setSession,
+    rmSession
+  }
+
+  async function getSession(devID) {
+    const str = await rdb.get(`session:${devID}`)
+    try {
+      const json = JSON.parse(str)
+      return json
+    } catch(err) {
+      console.log('session parse error', err.message)
+      return false
+    }
+  }
+
+  async function setSession(devID, data) {
+    return await rdb.set(`session:${devID}`, JSON.stringify(data))
+  }
+
+  async function rmSession(devID) {
+    return await rdb.del(devID)
   }
 
 }

@@ -6,6 +6,9 @@ export const schemas = {
   },
   CompanyData: {
 
+  },
+  OverallAverages: {
+
   }
 
 }
