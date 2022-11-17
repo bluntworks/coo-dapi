@@ -5,7 +5,8 @@ export {
   MongoClient,
   Database,
   ObjectId
-} from 'https://deno.land/x/mongo@v0.31.0/mod.ts'
+} from 'https://deno.land/x/mongo@v0.31.1/mod.ts'
+//} from 'https://deno.land/x/mongo@v0.31.0/mod.ts'
 
 export type { 
   Redis

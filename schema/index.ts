@@ -9,6 +9,27 @@ export const schemas = {
   },
   OverallAverages: {
 
+  },
+  Questions: {
+
+  },
+  UserTypeAverages: {
+
+  },
+
+  SurveysSubmitted: {
+
+  },
+
+  SectorAverages: {
+
+
+  },
+  CompanyList: {
+
+  },
+  BranchList: {
+
   }
 
 }
