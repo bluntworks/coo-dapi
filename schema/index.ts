@@ -1,38 +1,11 @@
 import { PlayerSchema } from './player.ts'
 
 export const schemas = {
-  player: {
-    PlayerSchema
-  },
-  CompanyData: {
+  Users: {
 
   },
-  OverallAverages: {
-
-  },
-  Questions: {
-
-  },
-  UserTypeAverages: {
-
-  },
-
-  SurveysSubmitted: {
-
-  },
-
-  SectorAverages: {
-
-
-  },
-  CompanyList: {
-
-  },
-  BranchList: {
+  m1: {
 
   }
-
 }
 
-export { PlayerSchema } from './player.ts'
-export type { TPlayer } from './player.ts'
